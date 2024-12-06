@@ -1,2 +1,9 @@
-all:
-	gcc -o executable rpi_2_main.c rpi_2_can.c rpi_2_stub.c rpi_2_motor.c rpi_2_lcd.c rpi_2_terminate.c -lwiringPi
+TARGET = executable
+CC = gcc
+
+INCLUDE = -lwiringPi -Ilib -Ican -Istub -IRPC
+
+SRCS = rpi_2_main.c $(wildcard can/*.c stub/*.c RPC/*.c)
+
+all: 
+	$(CC) -o $(TARGET) $(SRCS) $(INCLUDE)
