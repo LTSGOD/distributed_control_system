@@ -103,7 +103,7 @@ int can_listen() {
     int data[2];
 
     // 루프백 처리
-    read(socketDescripter, &frame, sizeof(struct can_frame));
+    // read(socketDescripter, &frame, sizeof(struct can_frame));
     while (1) {
 
         int nBytesRead = read(socketDescripter, &frame, sizeof(struct can_frame));
