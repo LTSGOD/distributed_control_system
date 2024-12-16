@@ -86,9 +86,16 @@ int can_listen(char* buf) {
             perror("READ() fail");
             return -1;
         }
-
+        // printf("0x%03X [%d] %dBytesRead\n",frame.can_id, frame.can_dlc, nBytesRead);
+        
         // loopback echo 문제 + 응답메세지 필터링
-        if ((frame.can_id == received_can_id) || frame.can_id == RESPONSE_ID) {
+        // if ((frame.can_id == received_can_id) || frame.can_id == RESPONSE_ID) {
+        //     received_can_id = 0x000;
+        //     continue;
+        // }
+
+        // 2개 can 연결(loopback echo 없을 때)
+        if (frame.can_id == RESPONSE_ID) {
             received_can_id = 0x000;
             continue;
         }
