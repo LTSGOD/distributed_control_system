@@ -1,14 +1,17 @@
 # CAN통신을 이용한 분산 제어 시스템 프로젝트
 ![kakaotalk_20241216_174412288](https://github.com/user-attachments/assets/6441d5c9-bea2-4003-ad3d-57623bfe64d1)
 
-# 시연영상
+# 시연
+https://github.com/user-attachments/assets/1dddf4ab-18cb-44af-82ab-b174afd8fa0b
+
+
 
 
 # RPI2 (RPC 서버)
 ![image](https://github.com/user-attachments/assets/63405573-6052-4ae3-bb71-4bcaf685ddae)
 
 - LCD 디스플레이
-- 서보모터90
+- 서보모터
 
 
 # RPI1 (제어기)
